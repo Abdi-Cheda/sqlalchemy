@@ -56,3 +56,18 @@ class Review(Base):
 engine = create_engine('sqlite:///database.db')
 Base.metadata.create_all(engine)
 
+
+# Adding sample data
+# Create instances of Customer, Restaurant, and Review
+customer1 = Customer(first_name="John", last_name="Doe")
+restaurant1 = Restaurant(name="The Fancy Steakhouse", price=4)
+review1 = Review(customer=customer1, restaurant=restaurant1, star_rating=5)
+
+# Add instances to the session
+session.add(customer1)
+session.add(restaurant1)
+session.add(review1)
+
+# Commit the transactions
+session.commit()
+
