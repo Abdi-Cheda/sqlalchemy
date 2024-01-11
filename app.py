@@ -38,14 +38,9 @@ class Review(Base):
     customer = relationship("Customer")
     restaurant = relationship("Restaurant")
 
-    # Include other methods here
+    from sqlalchemy import create_engine # Create tables
 
-# Create tables
-    from sqlalchemy import create_engine
-
-# data models
-
-engine = create_engine('sqlite:///database.db')
+engine = create_engine('sqlite:///database.db') # data models
 Base.metadata.create_all(engine)
 
 
