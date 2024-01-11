@@ -2,9 +2,7 @@ from sqlalchemy import Column, Integer, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
-# Create an instance of the declarative base class
 Base = declarative_base()
-
 class Review(Base):
     __tablename__ = 'reviews'
     
