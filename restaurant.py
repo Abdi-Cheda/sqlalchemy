@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer
 from sqlalchemy.orm import relationship
-from app import Base  # Import Base from the module where it's defined
+from app import Base
 
 class Restaurant(Base):
     __tablename__ = 'restaurants'
