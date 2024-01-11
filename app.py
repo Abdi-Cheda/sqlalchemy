@@ -7,8 +7,7 @@ Session = sessionmaker(bind=engine)
 session = Session()
 Base = declarative_base()
 
-# Model Definitions
-class Customer(Base):
+class Customer(Base): # Model Definitions
     __tablename__ = 'customers'
     id = Column(Integer, primary_key=True)
     first_name = Column(String)
@@ -35,5 +34,4 @@ class Review(Base):
     customer = relationship("Customer")
     restaurant = relationship("Restaurant")
 
-# Create tables
-Base.metadata.create_all(engine)
+Base.metadata.create_all(engine) # Create tables
