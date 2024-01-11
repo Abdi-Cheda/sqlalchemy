@@ -8,10 +8,5 @@ class Customer(Base):
     __tablename__ = 'customers'
     
     id = Column(Integer, primary_key=True)
-    # Include other columns (e.g., name, email) here
-    # For example:
-    # name = Column(String)
-
-    # Relationships
     reviews = relationship("Review", back_populates="customer")
 
