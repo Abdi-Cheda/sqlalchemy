@@ -1,7 +1,6 @@
 from app import session, Customer, Restaurant, Review
 
 customer1 = Customer(name="John Doe")
-# Create instances and add them to the session
 restaurant1 = Restaurant(name="The Fancy Steakhouse", price=4)
 customer1 = Customer(first_name="John", last_name="Doe")
 
