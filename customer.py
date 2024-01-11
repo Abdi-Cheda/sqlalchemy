@@ -15,5 +15,3 @@ class Customer(Base):
     # Relationships
     reviews = relationship("Review", back_populates="customer")
 
-# Add additional class definitions as needed
-
