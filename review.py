@@ -13,7 +13,6 @@ class Review(Base):
     customer_id = Column(Integer, ForeignKey('customers.id'), nullable=False)
     restaurant_id = Column(Integer, ForeignKey('restaurants.id'), nullable=False)
 
-    # Relationships
     customer = relationship("Customer", back_populates="reviews")
     restaurant = relationship("Restaurant", back_populates="reviews")
 
