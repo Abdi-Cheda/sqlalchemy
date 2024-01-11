@@ -2,19 +2,17 @@ from sqlalchemy import create_engine, Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
 
-engine = create_engine('sqlite:///database.db')
+engine = create_engine('sqlite:///database.db') # database setup
 Session = sessionmaker(bind=engine)
 session = Session()
 Base = declarative_base()
 
-# Model Definitions
-class Customer(Base):
+class Customer(Base): # Model Definitions
     __tablename__ = 'customers'
 
     id = Column(Integer, primary_key=True)
     first_name = Column(String)
     last_name = Column(String)
-    # Define other columns as needed
 
     def reviews(self):
         return session.query(Review).filter(Review.customer_id == self.id).all()
