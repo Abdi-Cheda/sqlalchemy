@@ -17,8 +17,6 @@ class Customer(Base): # Model Definitions
     def reviews(self):
         return session.query(Review).filter(Review.customer_id == self.id).all()
 
-    # Include other methods here
-
 class Restaurant(Base):
     __tablename__ = 'restaurants'
 
