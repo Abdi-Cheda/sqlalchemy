@@ -23,12 +23,9 @@ class Restaurant(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String)
     price = Column(Integer)
-    # Define other columns as needed
 
     def reviews(self):
         return session.query(Review).filter(Review.restaurant_id == self.id).all()
-
-    # Include other methods here
 
 class Review(Base):
     __tablename__ = 'reviews'
