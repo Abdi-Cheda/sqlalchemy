@@ -10,7 +10,6 @@ session.add(restaurant1)
 session.add(customer1)
 session.commit()
 
-# Create a Review instance
 review1 = Review(restaurant_id=restaurant1.id, customer_id=customer1.id, star_rating=5)
 
 session.add(review1)
